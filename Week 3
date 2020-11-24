@@ -1,0 +1,16 @@
+Ques:) Write a program that prompts for a file name, then opens that file and reads through the file, and print the contents of the file in upper case.
+Use the file words.txt to produce the output below. You can download the sample data at http://www.py4e.com/code3/words.txt.
+
+
+Ans:)
+# Use words.txt as the file name
+fname = input("Enter file name: ")
+fh = open(fname)
+#inp = fh.read()
+# ALWAYS USE STRIP FUNCTION INSTEAD OF RSTRIP TO MAKE SURE THAT ALL THE NEW LINES ARE CUT AND ONLY THE NEW LINES ARE PRINTED BECAUSE OF print()
+#inp = inp.strip()
+#print(inp.upper())
+
+for line in fh:
+    line = line.strip()
+    print(line.upper())
